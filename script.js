@@ -77,7 +77,7 @@ const noImages = [
 ];
 
 const noTexts = [
-  "Are you sure? ",
+  "i think u pressed the wrong button ",
   "Come on, say YES! ",
   "I’ll keep asking! "
 ];
