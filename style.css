@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+
+    background-image: url("bg.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    font-family: 'Pacifico', cursive;
+    color: #ff4d6d; /* pinkish color for all text */
+  }
+ 
+  h1, p, button {
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+ 
+  #questionScreen {
+    text-align: center;
+  }
+  
+  button {
+    margin: 15px;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  #questionImage {
+    width: 200px;
+    max-width: 80%;
+    margin: 20px auto;
+    border-radius: 20px;
+    display: block;
+  }
+  
+  
+  #yesBtn {
+    background-color: #ff4d6d;
+    color: #ffb6c1;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  #noBtn {
+    background-color: #ffb6c1;
+    color: #ff4d6d;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  
+  #loveScreen {
+    display: none;
+    text-align: center;
+  }
+  
+ .heart {
+  position: fixed;
+  bottom: -60px;
+  animation: floatUp 5s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.4);
+    opacity: 0;
+  }
+}
+
+#loveImage {
+  width: 300px;       /* bigger than before */
+  max-width: 90%;     /* still responsive on small screens */
+  margin: 20px auto;
+  display: block;
+  border-radius: 20px; 
+  
+}
+
+.love-card {
+  background: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 500px;
+  margin: 0 auto; /* center horizontally */
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+
+.love-card img {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.love-card h1, .love-card p {
+  color: #ff4d6d;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.love-card p {
+  font-size: 2rem; /* bigger than before */
+  color: #ff4d6d; /* keep pink */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* soft shadow */
+  margin-top: 20px; /* some space from the GIF */
+}
+
+/* Default for desktop */
+.card, .love-card {
+  max-width: 500px; /* desktop width */
+  padding: 40px;
+  margin: 0 auto;
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .card, .love-card {
+    max-width: 90%;  /* almost full width on phones */
+    padding: 20px;   /* less padding to fit screen */
+  }
+}
+
+/* Desktop font sizes */
+h1 {
+  font-size: 3rem;
+}
+p {
+  font-size: 2rem;
+}
+
+/* Mobile font sizes */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+#questionImage, #loveImage {
+  width: 300px;       /* desktop size */
+  max-width: 90%;     /* scale down for mobile */
+}
+
+/* optional smaller GIF on phones */
+@media (max-width: 600px) {
+  #questionImage, #loveImage {
+    width: 200px;
+  }
+}
+
+/* Default desktop spacing */
+button {
+  margin: 15px;
+  padding: 15px 35px;
+}
+
+/* Mobile stacking */
+@media (max-width: 600px) {
+  #questionScreen button {
+    display: block;       /* stack vertically */
+    width: 80%;           /* fill most of screen width */
+    margin: 10px auto;    /* center with spacing */
+  }
+}
